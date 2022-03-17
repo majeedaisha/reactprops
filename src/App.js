@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from "./components/Navbar"
+import Todo from "./components/Todo"
 
 function App() {
+  let title="My first react app";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Navbar title ={title} />
+    <main>
+    <Todo title="Learning react" datetime="23rd March 2022"/>
+    <Todo title="Premest training "datetime="2nd January 2022"/>
+    <Todo title="Pratical stress" datetime="2rd March 2022"/>
+    <Todo title="Problems from coding" datetime="23rd June 2022"/>
+    <Todo title="Teachers being fast" datetime="23rd May 2022"/>
+    </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
